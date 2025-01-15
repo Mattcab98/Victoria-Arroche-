@@ -3,15 +3,14 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    height: 65vh;
     gap: 15px;
-    background-color: #00000027;
-    width: 100vw;
-    height: 99vh;
+    background-color: var(--color1);
 }
 
 .navBar.open {
     display: flex;
-    animation: slideIn 1s ease-out;
 }
 
 .navBar a {
@@ -25,14 +24,4 @@
     scale: 1.05;
     color: var(--color2);
     text-shadow: 1.5px 3px 5px var(--color4);
-}
-
-@keyframes slideIn {
-    from {
-        transform: translateX(100%);
-    }
-
-    to {
-        transform: translateX(0);
-    }
 }
