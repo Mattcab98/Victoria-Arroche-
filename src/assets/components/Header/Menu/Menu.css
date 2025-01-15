@@ -1,0 +1,38 @@
+.navBar {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    background-color: #00000027;
+    width: 100vw;
+    height: 99vh;
+}
+
+.navBar.open {
+    display: flex;
+    animation: slideIn 1s ease-out;
+}
+
+.navBar a {
+    color: var(--color2);
+    text-decoration: none;
+    font-size: 1.25rem;
+}
+
+.navBar a:hover {
+    transition: scale .3s linear;
+    scale: 1.05;
+    color: var(--color2);
+    text-shadow: 1.5px 3px 5px var(--color4);
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}

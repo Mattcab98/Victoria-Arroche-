@@ -1,0 +1,22 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  --color1: #100303;
+  --color2: #F7F7F7;
+  --color3: #242424;
+  --color4: #9300ce;
+  --color5: #00c2ae;
+
+}
+
+a {
+  text-decoration: none;
+}
