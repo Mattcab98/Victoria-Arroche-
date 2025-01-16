@@ -2,12 +2,11 @@ import './Header.css'
 import Menu from './Menu/Menu'
 
 // Framer-motion
-import { motion, AnimatePresence } from 'framer-motion'
+import {AnimatePresence } from 'framer-motion'
 
 
 // IMAGENES
 import LogoVictoria from '../../images/logoVictArr.png'
-import ImageHero from '../../images/merc3.jpg'
 
 // ICONOS 
 import { HiMiniBars3 } from "react-icons/hi2";
@@ -24,48 +23,57 @@ const Header = () => {
 
     return (
         <>
+            <div className="container__hero">
 
-            <header className="header container">
+                <header className="header container">
 
-                {/* Contenedor LOGO MARCA */}
+                    {/* Contenedor LOGO MARCA */}
 
-                <img src={LogoVictoria} alt="" id="logo" />
+                    <img src={LogoVictoria} alt="" id="logo" />
 
-                {!isOpen && (
-                    <HiMiniBars3 className='iconMenu iconOpen' onClick={toggleMenu}></HiMiniBars3>
-                )}
+                    {!isOpen && (
+                        <HiMiniBars3 className='iconMenu iconOpen' onClick={toggleMenu}></HiMiniBars3>
+                    )}
 
-                {isOpen && (
-                    <IoClose className='iconMenu iconClose' onClick={toggleMenu}></IoClose>
-                )}
+                    {isOpen && (
+                        <IoClose className='iconMenu iconClose' onClick={toggleMenu}></IoClose>
+                    )}
 
 
-                {/* Componente menu responsive */}
+                    {/* Componente menu responsive */}
 
-                <div className='container__menuResponsive'>
-                    <AnimatePresence>
-                        {isOpen && (
-                            <Menu
-                                className="menuResponsive"
-                                key="menu"
-                                isOpen={isOpen}
-                                toggleMenu={toggleMenu}
-                            />
-                        )}
-                    </AnimatePresence>
-                </div>
-
-                <nav className='navDesktop'>
-                    <div className='container__navDesktop'>
-                        <a href="#" className="navBar__a">Home</a>
-                        <a href="#" className="navBar__a">About Me</a>
-                        <a href="#" className="navBar__a">My photographs</a>
-                        <a href="#" className="navBar__a">Contact</a>
+                    <div className='container__menuResponsive'>
+                        <AnimatePresence>
+                            {isOpen && (
+                                <Menu
+                                    className="menuResponsive"
+                                    key="menu"
+                                    isOpen={isOpen}
+                                    toggleMenu={toggleMenu}
+                                />
+                            )}
+                        </AnimatePresence>
                     </div>
-                </nav>
 
-            </header>
+                    <nav className='navDesktop'>
+                        <div className='container__navDesktop'>
+                            <a href="#" className="navBar__a">Home</a>
+                            <a href="#" className="navBar__a">About Me</a>
+                            <a href="#" className="navBar__a">My photographs</a>
+                            <a href="#" className="navBar__a">Contact</a>
+                        </div>
+                    </nav>
 
+                </header>
+
+                <h1>Donde las Imágenes Hablan</h1>
+
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam facilis dolor amet facere saepe. Quod repellendus fugiat fuga atque iusto?</p>
+            </div>
+            
+            <div className='hola'>
+                
+            </div>
         </>
     );
 };
