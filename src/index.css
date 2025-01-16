@@ -15,8 +15,8 @@
   --color4: #9300ce;
   --color5: #00c2ae;
 
-}
+  a {
+    text-decoration:none ;
+  }
 
-a {
-  text-decoration: none;
 }

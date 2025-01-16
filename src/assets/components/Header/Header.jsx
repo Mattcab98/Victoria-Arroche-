@@ -2,11 +2,12 @@ import './Header.css'
 import Menu from './Menu/Menu'
 
 // Framer-motion
-import { AnimatePresence } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
 
 
 // IMAGENES
 import LogoVictoria from '../../images/logoVictArr.png'
+import ImageHero from '../../images/merc3.jpg'
 
 // ICONOS 
 import { HiMiniBars3 } from "react-icons/hi2";
@@ -22,35 +23,50 @@ const Header = () => {
     };
 
     return (
-        <header className="header">
-            <nav className="nav container">
-                <div className="container__logo">
-                    <img src={LogoVictoria} alt="" id="logo" />
+        <>
+
+            <header className="header container">
+
+                {/* Contenedor LOGO MARCA */}
+
+                <img src={LogoVictoria} alt="" id="logo" />
+
+                {!isOpen && (
+                    <HiMiniBars3 className='iconMenu iconOpen' onClick={toggleMenu}></HiMiniBars3>
+                )}
+
+                {isOpen && (
+                    <IoClose className='iconMenu iconClose' onClick={toggleMenu}></IoClose>
+                )}
+
+
+                {/* Componente menu responsive */}
+
+                <div className='container__menuResponsive'>
+                    <AnimatePresence>
+                        {isOpen && (
+                            <Menu
+                                className="menuResponsive"
+                                key="menu"
+                                isOpen={isOpen}
+                                toggleMenu={toggleMenu}
+                            />
+                        )}
+                    </AnimatePresence>
                 </div>
 
-                <div className='container__iconMenu'>
+                <nav className='navDesktop'>
+                    <div className='container__navDesktop'>
+                        <a href="#" className="navBar__a">Home</a>
+                        <a href="#" className="navBar__a">About Me</a>
+                        <a href="#" className="navBar__a">My photographs</a>
+                        <a href="#" className="navBar__a">Contact</a>
+                    </div>
+                </nav>
 
-                    {!isOpen && (
-                        <HiMiniBars3 className='iconMenu iconOpen' isOpen={isOpen} toggleMenu={toggleMenu} onClick={toggleMenu}></HiMiniBars3>
-                    )}
+            </header>
 
-                    {isOpen && (
-                        <IoClose className='iconMenu iconClose' isOpen={isOpen} toggleMenu={toggleMenu} onClick={toggleMenu}></IoClose>
-                    )}
-                </div>
-
-                <AnimatePresence>
-                    {isOpen && (
-                        <Menu
-                            key="menu"
-                            isOpen={isOpen}
-                            toggleMenu={toggleMenu}
-                        />
-                    )}
-                </AnimatePresence>
-
-            </nav>
-        </header>
+        </>
     );
 };
 export default Header;
