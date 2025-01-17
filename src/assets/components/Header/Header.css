@@ -1,25 +1,28 @@
 /* Font Family */
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Oswald:wght@200..700&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
+
 .container__hero {
     background-image: url('../../images/merc3.jpg');
     background-size: cover;
     background-position: center;
-    height: 100vh;
+    width: 100vw;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    font-family: "DM Sans", serif;
 }
 
 .header {
     width: 100%;
     display: flex;
+    justify-content: space-around;
     align-items: center;
-    justify-content: start;
 }
 
 #logo {
-    width: 200px;
+    width: 70px;
 }   
 
 .iconMenu {
@@ -64,34 +67,127 @@
     width: 100%;
 }
 
-.container__hero {
-    font-family: "DM Sans", serif;
+.container__txt {
+    transition: all 3s ease;
     text-align: center;
-
 }
 
-.container__hero h1 {
-    color: var(--color2);
-    font-size: 3.5rem;
-    font-weight: 600;
-    width: 300px;
+.container__leftText {
+    display: flex;
+    flex-direction: column;
+    margin: 50px 0;
 }
 
-.container__hero p {
-    font-weight: 200;
-    color: var(--color2);
-}
-
-.hola {
+.container__leftTitle {
     width: 100%;
-    height: 600px;
-    background-color: var(--color4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
 }
+
+.container__leftTitle  h3 {
+    font-size: .7rem;
+    color: var(--color1);
+    font-weight: 800;
+    opacity: .5;
+}
+
+.container__leftTitle h1 {
+    color: var(--color2);
+    font-size: 3.3rem;
+    font-weight: 700;
+}
+
+#buttonContact {
+    background-color: var(--color4);
+    color: var(--color2);
+    width: 80%;
+    border: none;
+    transition: background-color .8s ease, box-shadow .8s ease, border .5s linear;
+    cursor: pointer;
+}
+
+#buttonContact:hover {
+    background-color: blueviolet;
+    box-shadow: 2px 5px 10px var(--color4);
+    border: .5px solid var(--color4);
+}
+
+.container__leftTitle p {
+    color: var(--color2);
+    padding: 10px;
+}
+
+.container__typePhoto {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+    padding: 20px;
+    color: var(--color2);
+}
+
+.typePhoto__itemType {
+    background-color: #2c052c72;
+    border-radius: 20px;
+    padding: 15px;
+    transition: all .5s ease;
+    text-align: start;
+}
+
+.typePhoto__itemType:hover {
+    background-color: #800080be;
+    scale: 1.05;
+}
+
+.typePhoto__item h3 {
+    color: var(--color2);
+    font-size: 2rem;
+    text-align: center;
+    padding: 20px;
+}
+
+.typePhoto__itemType ul {
+    display: grid;
+    gap: 10px;
+}
+
+.typePhoto__itemCam h3 {
+    font-size: 1rem;
+    font-weight: 300;
+    opacity: .5;
+}
+
+@media (min-width:400px) {
+    
+    .container__leftTitle  h3 {
+        font-size: 1rem;
+        opacity: .8;
+    }
+}
+
 
 @media (min-width:768px) {
-    .header {
-        /* padding: 50px; */
-        justify-content: space-evenly;
+
+    .container__leftTitle {
+        max-width: 100%;
+        align-items: center;
+        gap: 20px;
+    }
+    
+    .container__leftTitle h1, .container__leftTitle p {
+        text-align: center;
+        padding: 0;
+        max-width: 500px;
+    }
+
+    #buttonContact {
+        width: 40%;
+    }
+
+    .container__typePhoto {
+        flex-direction: column;
     }
 
     .iconMenu, .container__menuResponsive {
@@ -102,3 +198,64 @@
         display: flex;
     }
 }
+
+
+@media (min-width:1000px) {
+
+    .container__leftTitle {
+        max-width: 500px;
+        align-items: start;
+    }
+
+    .container__leftTitle  h3 {
+        font-size: 1.2rem;
+        color: var(--color2);
+        opacity: 1;
+    }
+
+    .container__leftTitle h1, .container__leftTitle p {
+        text-align: start;
+        padding: 0;
+        max-width: 500px;
+    }
+
+    .container__typePhoto {
+        flex-direction: row;
+        padding: 0;
+        justify-content: end;
+    }
+
+    .typePhoto__itemType {
+        background-color: transparent;
+        border-radius: 20px;
+        padding: 15px;
+        transition: all .5s ease;
+
+    }
+
+    .typePhoto__itemType h3 {
+        text-align: end;
+    }
+
+    .typePhoto__itemType ul {
+        text-align: end;
+        list-style: none;
+    }
+
+    .typePhoto__itemType:hover {
+        background-color: transparent;
+        scale: 1;
+    }
+
+    .typePhoto__itemCam {
+        position: absolute;
+        transform: rotate(-90deg);
+        top: 300px;
+        right: -240px;
+    }
+
+    .typePhoto__itemCam h3 {
+        font-size: .8rem;
+    }
+
+} 
