@@ -1,13 +1,8 @@
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
 
   --color1: #100303;
   --color2: #F7F7F7;
@@ -18,5 +13,8 @@
   a {
     text-decoration:none ;
   }
+}
 
+body {
+  background-image: radial-gradient(circle, #410f46, #501656, #5f1e66, #6f2576, #7f2d87, #7f2d87, #7f2d87, #7f2d87, #6f2576, #5f1e66, #501656, #410f46);
 }

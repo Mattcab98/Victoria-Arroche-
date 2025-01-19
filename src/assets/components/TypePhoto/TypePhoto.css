@@ -1,0 +1,65 @@
+.typePhoto {
+    width: 100vw;
+    height: auto;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.category {
+    width: 100%;
+    height: 300px;
+    display: grid;
+    place-content: center;
+    border: 2px solid;
+    border-radius: 30px;
+    transition: height .5s ease-in-out;
+}
+
+.category h2 {
+    color: var(--color2);
+}
+
+.category1, .category2, .category3 {
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: .5;
+}
+
+.category1 {
+    background-image: url('../../images/voz2.jpg');
+}
+
+.category2 {
+    background-image: url('../../images/escenario.jpg');
+}
+.category3 {
+    background-image: url('../../images/it2.jpg');
+    background-position: right;
+}
+
+.category:hover {
+    opacity: 1;
+    height: 350px;
+    transition: height .5s ease-in-out;
+}
+
+@media (min-width:768px) {
+    .typePhoto {
+        flex-direction: row;
+        text-align: center;
+        justify-content: space-around;
+        max-width: 770px;
+        margin: auto;
+    }
+ 
+    .category {
+        max-width: 300px;
+    }
+
+    .category:hover {
+        height: 400px;
+    }
+}

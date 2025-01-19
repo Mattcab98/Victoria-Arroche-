@@ -201,61 +201,62 @@
 
 
 @media (min-width:1000px) {
-
+    
     .container__leftTitle {
         max-width: 500px;
         align-items: start;
     }
-
+    
     .container__leftTitle  h3 {
         font-size: 1.2rem;
         color: var(--color2);
         opacity: 1;
     }
-
+    
     .container__leftTitle h1, .container__leftTitle p {
         text-align: start;
         padding: 0;
         max-width: 500px;
     }
-
+    
     .container__typePhoto {
         flex-direction: row;
         padding: 0;
         justify-content: end;
     }
-
+    
     .typePhoto__itemType {
         background-color: transparent;
         border-radius: 20px;
         padding: 15px;
         transition: all .5s ease;
-
+        
     }
-
+    
     .typePhoto__itemType h3 {
         text-align: end;
     }
-
+    
     .typePhoto__itemType ul {
         text-align: end;
         list-style: none;
     }
-
+    
     .typePhoto__itemType:hover {
         background-color: transparent;
         scale: 1;
     }
-
+    
     .typePhoto__itemCam {
         position: absolute;
         transform: rotate(-90deg);
         top: 300px;
-        right: -240px;
+        right: -215px;
     }
-
+    
     .typePhoto__itemCam h3 {
         font-size: .8rem;
     }
+    
 
 } 

@@ -7,7 +7,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 
 // IMAGENES
 import LogoVictoria from '../../images/logoVictArr.png'
-import Logo2 from '../../../../public/Cam.svg'
+import Logo2 from '../../images/Cam.svg'
 
 // ICONOS 
 import { HiMiniBars3 } from "react-icons/hi2";
@@ -31,8 +31,8 @@ const Header = () => {
                     {/* Contenedor LOGO MARCA */}
 
                     <motion.img src={Logo2} alt="Logo" id="logo"
-                        initial= {{ opacity:0, scale: 1}}
-                        animate= {{ opacity: 1, scale: 1.8 }}
+                        initial= {{rotateZ: '20deg', opacity:0, scale: 1}}
+                        animate= {{ opacity: 1, scale: 1.8,rotateZ: '0deg'}}
                         transition= {{ duration: 1, ease: 'easeInOut' }}
                     />
 
