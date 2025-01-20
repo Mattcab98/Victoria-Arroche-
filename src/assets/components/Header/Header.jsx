@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 
 
 // IMAGENES
-import LogoVictoria from '../../images/logoVictArr.png'
+// import LogoVictoria from '../../images/logoVictArr.png'
 import Logo2 from '../../images/Cam.svg'
 
 // ICONOS 
