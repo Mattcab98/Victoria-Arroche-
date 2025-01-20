@@ -1,6 +1,6 @@
 import './About.css'
 
-import victoria from '../../images/victoria.jpg'
+// import victoria from '../../images/victoria.jpg'
 
 const About = () => {
     return (

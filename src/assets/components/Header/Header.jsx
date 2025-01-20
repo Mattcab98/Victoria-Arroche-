@@ -10,7 +10,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import Logo2 from '../../images/Cam.svg'
 
 // ICONOS 
-import { HiMiniBars3 } from "react-icons/hi";
+import { HiMiniBars3 } from "react-icons/hi2";
 import { IoClose } from "react-icons/io5";
 
 import { useState } from 'react';
