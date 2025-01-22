@@ -1,9 +1,4 @@
 import './TypePhoto.css'
-// import Carousel from '../Carousel/Carousel'
-
-// import Event from '../../images/voz2.jpg'
-// import Comercial from '../../images/it.jpg'
-// import Retrato from '../../images/gente1.jpg'
 
 
 
