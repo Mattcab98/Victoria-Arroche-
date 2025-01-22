@@ -10,7 +10,7 @@ import './TypePhoto.css'
 const TypePhoto = () => {
     return (
         <>
-            <section className='typePhoto'>
+            <section className='typePhoto container'>
                 {/* <Carousel/> */}
                 <div className="category category1">
                     <h2>Portrait photography</h2>

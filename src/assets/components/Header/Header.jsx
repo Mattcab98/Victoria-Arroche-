@@ -10,9 +10,8 @@ import { motion, AnimatePresence } from 'framer-motion'
 import Logo2 from '../../images/Cam.svg'
 
 // ICONOS 
-import { HiMiniBars3 } from "react-icons/hi2";
-
-import { IoClose } from "react-icons/io5";
+import { HiMenu } from "react-icons/hi";
+import { AiOutlineClose } from "react-icons/ai";
 
 import { useState } from 'react';
 
@@ -38,11 +37,11 @@ const Header = () => {
                     />
 
                     {!isOpen && (
-                        <HiMiniBars3 className='iconMenu iconOpen' onClick={toggleMenu}></HiMiniBars3>
+                        <HiMenu className='iconMenu iconOpen' onClick={toggleMenu}/>
                     )}
 
                     {isOpen && (
-                        <IoClose className='iconMenu iconClose' onClick={toggleMenu}></IoClose>
+                        <AiOutlineClose  className='iconMenu iconClose' onClick={toggleMenu}/>
                     )}
 
 
@@ -80,8 +79,7 @@ const Header = () => {
                             <h3 className='name'>Maria Victoria Arroche, professional photography.</h3>
                             <h1>Cada foto cuenta una historia.</h1>
                             <button className='btn btn-light' id='buttonContact'>¡Descubramos la tuya!</button>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis quisquam nam veniam in odit perspiciatis dignissimos numquam beatae. Animi, non?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, doloribus.
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum eveniet ea voluptatem ab libero quam atque quisquam incidunt ullam esse?
+                            <p>Cada fotografía es un portal al pasado, un testigo silencioso de un instante irrepetible. Captura no solo la imagen, sino también las emociones, los detalles y las historias que envuelven ese momento. Es el arte de detener el tiempo, de preservar aquello que las palabras no siempre pueden expresar. Una fotografía no solo muestra lo que sucedió, sino cómo se sintió, permitiéndonos revivir una y otra vez la magia de aquel instante.
                             </p>
                         </div>
 

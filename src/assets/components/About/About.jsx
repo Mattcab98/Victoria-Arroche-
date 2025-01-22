@@ -6,16 +6,16 @@ const About = () => {
     return (
         <>
             <div className="container__about">
-                <div className="containerDos">
+                <div className="containerDos  container">
                     <div className="about__left">
                         <div className="container__photoVictoria"></div>
                     </div>
 
                     <div className="about__right">
                         <div className="about__right-txt">
-                            <h2>SOBRE MI</h2>
-                            <h3>Lorem ipsum dolor sit amet.</h3>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos sed voluptates numquam ipsa repellat deserunt eligendi mollitia sunt facere vel! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, fugiat recusandae impedit neque distinctio nihil consectetur ipsum beatae architecto consequatur.</p>
+                            <h2>I'm <strong>Maria Victoria</strong></h2>
+                            <h3>Un arte que me conecta con mi historia.</h3>
+                            <p>La fotografía es parte de mi esencia. Crecí aprendiendo de mi padre, también fotógrafo, y heredé su pasión por capturar momentos únicos. Cada imagen que tomo cuenta una historia, buscando siempre transmitir emociones y crear recuerdos que perduren.</p>
                         </div>
                     </div>
                 </div>

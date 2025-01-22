@@ -4,7 +4,6 @@ import Header from './assets/components/Header/Header'
 import TypePhoto from './assets/components/TypePhoto/TypePhoto'
 
 
-
 function App() {
 
   return (

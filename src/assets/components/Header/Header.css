@@ -76,6 +76,7 @@
     display: flex;
     flex-direction: column;
     margin: 50px 0;
+    font-weight: 500;
 }
 
 .container__leftTitle {
@@ -90,7 +91,7 @@
     font-size: .7rem;
     color: var(--color1);
     font-weight: 800;
-    opacity: .5;
+    opacity: .8;
 }
 
 .container__leftTitle h1 {
@@ -134,11 +135,6 @@
     padding: 15px;
     transition: all .5s ease;
     text-align: start;
-}
-
-.typePhoto__itemType:hover {
-    background-color: #800080be;
-    scale: 1.05;
 }
 
 .typePhoto__item h3 {
