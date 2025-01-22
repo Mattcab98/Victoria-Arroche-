@@ -14,7 +14,8 @@
     "framer-motion": "^11.18.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-icons": "^4.12.0"
+    "react-icons": "^4.12.0",
+    "sweetalert2": "^11.15.10"
   },
   "devDependencies": {
     "@eslint/js": "^9.17.0",
