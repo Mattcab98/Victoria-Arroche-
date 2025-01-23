@@ -2,6 +2,15 @@
     width: 100vw;
     height: auto;
 
+    view-timeline-name: --sectionMove;
+    view-timeline-axis: block;
+    
+    animation-timeline: --sectionMove;
+    animation-name: moveTopOpacity;
+    animation-fill-mode: both;
+    animation-range: entry 10% cover 25%;
+
+
 }
 
 .contact__form {
@@ -12,15 +21,6 @@
     border-radius: 20px;
     box-shadow: 2px 3px 8px #3b045a;
     padding: 40px;
-
-    
-    view-timeline-name: --moveTop;
-    view-timeline-axis: block;
-    
-    animation-timeline: --moveTop;
-    animation-name: moveTop;
-    animation-fill-mode: both;
-    animation-range: entry 20% cover 60%;
 
 }
 
@@ -86,6 +86,10 @@
 }
 
 @media (min-width:768px) {
+
+    .contact {
+        padding-top: 100px;
+    }
 
     .contact__form {
         max-width: 700px;

@@ -5,15 +5,17 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+    position: relative;
 
-    view-timeline-name: --moveTop;
+    view-timeline-name: --sectionMove;
     view-timeline-axis: block;
     
-    animation-timeline: --moveTop;
-    animation-name: moveTop;
-    animation-fill-mode: forwards;
-    animation-range: entry 15% cover 70%;
+    animation-timeline: --sectionMove;
+    animation-name: moveTopOpacity;
+    animation-fill-mode: both;
+    animation-range: entry 10% cover 30%;
 
+    padding-top: 100px;
 
 }
 
@@ -25,6 +27,15 @@
     border: 2px solid;
     border-radius: 30px;
     transition: height .5s ease-in-out;
+
+    
+    view-timeline-name: --moveLeft;
+    view-timeline-axis: block;
+    
+    animation-timeline: --moveLeft;
+    animation-name: moveLeft;
+    animation-fill-mode: both;
+    animation-range: entry 25% cover 35%;
 }
 
 .category h2 {
@@ -40,39 +51,14 @@
 
 .category1 {
     background-image: url('../../images/optimized/voz2Optimized.jpg');
-
-    view-timeline-name: --opacityLeft;
-    view-timeline-axis: block;
-    
-    animation-timeline: --opacityLeft;
-    animation-name: moveOpacityLeft;
-    animation-fill-mode: both;
-    animation-range: entry 15% cover 50%;
 }
 
 .category2 {
     background-image: url('../../images/optimized/escenarioOptimized.jpg');
-    view-timeline-name: --opacity;
-    view-timeline-axis: block;
-    
-    animation-timeline: --opacity;
-    animation-name: opacity;
-    animation-fill-mode: both;
-    animation-range: entry 15% cover 50%;
 }
 
 .category3 {
     background-image: url('../../images/optimized/it2Optimized.jpg');
-    background-position: right;
-
-    view-timeline-name: --opacityRight;
-    view-timeline-axis: block;
-    
-    animation-timeline: --opacityRight;
-    animation-name: moveOpacityRight;
-    animation-fill-mode: both;
-    animation-range: entry 15% cover 50%;
-
 }
 
 .category:hover {

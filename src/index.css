@@ -41,19 +41,20 @@ body {
   }
 }
 
-@keyframes moveTop {
+@keyframes moveTopOpacity {
   from {
       transform: translateY(0px);
-      z-index: -1;
+      opacity: .5;
   }
 
   to {
       transform: translateY(-200px);
+      opacity: 1;
 
   }
 }
 
-@keyframes moveOpacityLeft {
+@keyframes moveLeft {
   from {
       transform: translateX(-200px);
       opacity: 0;
@@ -64,8 +65,7 @@ body {
       opacity: 1;
   }
 }
-
-@keyframes moveOpacityRight {
+@keyframes g {
   from {
       transform: translateX(200px);
       opacity: 0;
@@ -76,5 +76,4 @@ body {
       opacity: 1;
   }
 }
-
 

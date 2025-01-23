@@ -6,7 +6,7 @@ const TypePhoto = () => {
     return (
         <>
             <section className='typePhoto container'>
-                {/* <Carousel/> */}
+
                 <div className="category category1">
                     <h2>Portrait photography</h2>
                 </div>

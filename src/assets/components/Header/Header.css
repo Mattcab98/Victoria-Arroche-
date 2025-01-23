@@ -141,6 +141,15 @@
     padding: 15px;
     transition: all .5s ease;
     text-align: start;
+
+    view-timeline-name: --title;
+    view-timeline-axis: block;
+    
+    animation-timeline: --title;
+    animation-name: opacity;
+    animation-fill-mode: both;
+    animation-range: entry 25% cover 35%;
+
 }
 
 .typePhoto__item h3 {
@@ -229,14 +238,6 @@
     }
     
     .typePhoto__itemType {
-        view-timeline-name: --textoOpacity;
-        view-timeline-axis: block;
-        
-        animation-timeline: --textoOpacity;
-        animation-name: topScroll;
-        animation-fill-mode: both;
-        animation-range: entry 10% cover 30%;
-
         background-color: transparent;
         text-shadow: 2px 2px 8px var(--color1);
         border-radius: 20px;
