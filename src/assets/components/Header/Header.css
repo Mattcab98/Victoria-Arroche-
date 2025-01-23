@@ -3,7 +3,7 @@
 
 
 .container__hero {
-    background-image: url('../../images/merc3.jpg');
+    background-image: url('../../images/optimized/merc3Op.jpg');
     background-size: cover;
     background-position: center;
     width: 100vw;
@@ -89,9 +89,9 @@
 
 .container__leftTitle  h3 {
     font-size: .7rem;
-    color: var(--color1);
+    color: var(--color5);
     font-weight: 800;
-    opacity: .8;
+    opacity: 1;
 }
 
 .container__leftTitle h1 {

@@ -29,14 +29,14 @@
 }
 
 .category1 {
-    background-image: url('../../images/voz2.jpg');
+    background-image: url('../../images/optimized/voz2Optimized.jpg');
 }
 
 .category2 {
-    background-image: url('../../images/escenario.jpg');
+    background-image: url('../../images/optimized/escenarioOptimized.jpg');
 }
 .category3 {
-    background-image: url('../../images/it2.jpg');
+    background-image: url('../../images/optimized/it2Optimized.jpg');
     background-position: right;
 }
 
