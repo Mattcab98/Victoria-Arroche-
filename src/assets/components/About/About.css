@@ -1,21 +1,32 @@
+.prueba {
+    background-color: rgb(82, 1, 82);
+    view-timeline-name: --moveTop;
+    view-timeline-axis: block;
+    
+    animation-timeline: --moveTop;
+    animation-name: moveTop;
+    animation-fill-mode: forwards;
+    animation-range: entry 65% cover 100%;
+    
+}
+
 .container__about {
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: space-around;
-    background-color: rgba(82, 1, 82, 0.274);
     color: var(--color2);
-    padding: 20px;
+    padding: 80px;
+
 }
 
 .containerDos {
-    width: 100%;
-    height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    gap: 30px;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
 }
 
 .about__left {
@@ -47,6 +58,7 @@
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    /* width: 90%; */
 }
 
 .about__right-txt h2 {
@@ -86,15 +98,15 @@
     }
 
     .about__right {
-        width: 50%;
+        height: 100%;
         display: flex;
         justify-content: end;
         align-items: center;
     }
 
     .about__right-txt {
-        width: 380px;
-        height: 300px;
+        /* width: 380px;
+        height: 300px; */
         text-align: end;
     }
 

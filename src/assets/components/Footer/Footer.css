@@ -9,6 +9,8 @@
 .footer a {
     font-size: 1rem;
     color: var(--color2);
+    transition: all .3s ease;
+
 }
 
 
@@ -26,15 +28,20 @@
 }
 
 .icon {
-    transition: scale .4s ease;
+    transition: all .4s ease;
     font-size: 1.5rem;
+}
 
+.icon:hover {
+    transform: rotateZ(-10deg);
+    transition: all .3s ease;
+    border-radius: 50%;
 }
 
 .footer a:hover {
-    scale: 1.1;
-    color: var(--color4);
-    transition: scale .6s ease;
+    scale: 1.2;
+    text-shadow: 2px 5px 9px var(--color4);
+    transition: all .3s ease;
 }
 
 .copyright {

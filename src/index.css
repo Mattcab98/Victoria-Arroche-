@@ -18,3 +18,63 @@
 body {
   background-image: radial-gradient(circle, #410f46, #501656, #5f1e66, #6f2576, #7f2d87, #7f2d87, #7f2d87, #7f2d87, #6f2576, #5f1e66, #501656, #410f46);
 }
+
+@keyframes topScroll {
+  from {
+      opacity: 0;
+      transform: translateY(50px);
+  }
+
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes opacity {
+  from {
+      opacity: 0;
+  }
+
+  to {
+      opacity: 1;
+  }
+}
+
+@keyframes moveTop {
+  from {
+      transform: translateY(0px);
+      z-index: -1;
+  }
+
+  to {
+      transform: translateY(-200px);
+
+  }
+}
+
+@keyframes moveOpacityLeft {
+  from {
+      transform: translateX(-200px);
+      opacity: 0;
+  }
+
+  to {
+      transform: translateY(0px);
+      opacity: 1;
+  }
+}
+
+@keyframes moveOpacityRight {
+  from {
+      transform: translateX(200px);
+      opacity: 0;
+  }
+
+  to {
+      transform: translateY(0px);
+      opacity: 1;
+  }
+}
+
+

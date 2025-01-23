@@ -3,9 +3,10 @@
 
 
 .container__hero {
-    background-image: url('../../images/optimized/merc3Op.jpg');
+    background-image: url('../../images/merc3.jpg');
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     width: 100vw;
     height: auto;
     display: flex;
@@ -16,13 +17,17 @@
 
 .header {
     width: 100%;
+    height: 100%;
     display: flex;
-    justify-content: space-around;
     align-items: center;
+    justify-content: space-between;
+    padding: 30px;
 }
 
 #logo {
     width: 70px;
+    position: relative;
+    left: 50px;
 }   
 
 .iconMenu {
@@ -70,6 +75,7 @@
 .container__txt {
     transition: all 3s ease;
     text-align: center;
+    text-shadow: 1px 3px 8px var(--color1);
 }
 
 .container__leftText {
@@ -87,7 +93,7 @@
     gap: 10px;
 }
 
-.container__leftTitle  h3 {
+.container__leftTitle h3 {
     font-size: .7rem;
     color: var(--color5);
     font-weight: 800;
@@ -140,8 +146,8 @@
 .typePhoto__item h3 {
     color: var(--color2);
     font-size: 2rem;
-    text-align: center;
     padding: 20px;
+    padding-right: 0;
 }
 
 .typePhoto__itemType ul {
@@ -219,14 +225,23 @@
         flex-direction: row;
         padding: 0;
         justify-content: end;
+
     }
     
     .typePhoto__itemType {
+        view-timeline-name: --textoOpacity;
+        view-timeline-axis: block;
+        
+        animation-timeline: --textoOpacity;
+        animation-name: topScroll;
+        animation-fill-mode: both;
+        animation-range: entry 10% cover 30%;
+
         background-color: transparent;
+        text-shadow: 2px 2px 8px var(--color1);
         border-radius: 20px;
         padding: 15px;
-        transition: all .5s ease;
-        
+        transition: all .5s ease;   
     }
     
     .typePhoto__itemType h3 {
@@ -246,7 +261,7 @@
     .typePhoto__itemCam {
         position: absolute;
         transform: rotate(-90deg);
-        top: 300px;
+        top: 385px;
         right: -215px;
     }
     
@@ -254,5 +269,4 @@
         font-size: .8rem;
     }
     
-
 } 

@@ -2,7 +2,7 @@ import './Header.css'
 import Menu from './Menu/Menu'
 
 // Framer-motion
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion, AnimatePresence  } from 'framer-motion'
 
 
 // IMAGENES
@@ -13,9 +13,10 @@ import Logo2 from '../../images/Cam.svg'
 import { HiMenu } from "react-icons/hi";
 import { AiOutlineClose } from "react-icons/ai";
 
-import { useState } from 'react';
+import { useState} from 'react';
 
 const Header = () => {
+
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleMenu = () => {
@@ -26,7 +27,7 @@ const Header = () => {
         <>
             <div className="container__hero">
 
-                <header className="header container px-0">
+                <header className="header container">
 
                     {/* Contenedor LOGO MARCA */}
 
@@ -71,7 +72,7 @@ const Header = () => {
 
                 </header>
 
-                <div className="container__txt container px-0">
+                <div className="container__txt container">
 
                     <div className='container__leftText'>
 
@@ -93,15 +94,11 @@ const Header = () => {
                                     <li>Fine art photography: Artistic and creative expressions through photography.</li>
                                 </ul>
                             </div>
-                            {/* <div className='typePhoto__item typePhoto__itemAbout '>
-                                <h3>About this photography</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio quibusdam pariatur ducimus porro, explicabo nesciunt.</p>
-                            </div> */}
                             <div className='typePhoto__item typePhoto__itemCam'>
                                 <h3>Captured with Nikon D850 and AF-S NIKKOR 70-200mm f/2.8E FL ED VR Lens</h3>
                             </div>
                         </div>
-
+                        
                     </div>
 
                 </div>

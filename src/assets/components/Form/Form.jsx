@@ -4,7 +4,7 @@ import Swal from 'sweetalert2'
 
 const Form = () => {
 
-    const [result, setResult] = useState("");
+    const [setResult] = useState("");
 
     const onSubmit = async (event) => {
         event.preventDefault();
@@ -38,7 +38,6 @@ const Form = () => {
 
         <>
 
-            <hr />
             <section className="contact">
 
 
