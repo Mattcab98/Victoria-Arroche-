@@ -1,16 +1,6 @@
 .contact {
     width: 100vw;
     height: auto;
-
-    view-timeline-name: --sectionMove;
-    view-timeline-axis: block;
-    
-    animation-timeline: --sectionMove;
-    animation-name: moveTopOpacity;
-    animation-fill-mode: both;
-    animation-range: entry 10% cover 25%;
-
-
 }
 
 .contact__form {
@@ -43,17 +33,30 @@
 }
 
 
-.input-box input, .input-box textarea{
+.input-box input, .input-box textarea {
     border: none;
     outline: none;
     border-radius: 20px;
     background-color: #53198a;
-    padding: 5px;
     padding-left: 25px;
     opacity: .3;
     transition: all .5s ease-in;
     font-size: .8rem;
     height: 30px;
+
+    view-timeline-name: --reveal;
+
+    animation-name: fadeOnScroll;
+    animation-fill-mode: both;
+
+    animation-timeline: --reveal;
+    animation-range: entry 10% cover 20%;
+
+}
+
+.input-box textarea {
+    padding: 0;
+    padding-left: 25px;
 }
 
 .input-box .mess {
@@ -75,8 +78,6 @@
 
 
 .input-box input::placeholder, .input-box textarea::placeholder {
-    /* padding-left: 10px; */
-    
     color: var(--color);
 }
 
@@ -88,10 +89,14 @@
 @media (min-width:768px) {
 
     .contact {
-        padding-top: 100px;
+        padding-bottom: 50px;
     }
 
     .contact__form {
         max-width: 700px;
+    }
+
+    .contact__form input, .contact__form textarea {
+        font-size: 1.2rem;
     }
 }

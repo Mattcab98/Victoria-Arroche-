@@ -26,7 +26,7 @@ const Form = () => {
                 text: 'Message sent successfully!',
                 icon: 'success'
             });
-            // event.target.reset();
+            event.target.reset();
         } else {
             console.log("Error", data);
             setResult(data.message);
@@ -38,7 +38,7 @@ const Form = () => {
 
         <>
 
-            <section className="contact">
+            <section className="contact" id='contact'>
 
 
                 <form onSubmit={onSubmit} className='contact__form'>

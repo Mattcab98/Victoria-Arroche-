@@ -7,10 +7,10 @@ const About = () => {
         <>
             <div className='prueba container-fluid'>
 
-                <div className="container__about container">
+                <div className="container__about container "id='aboutme'>
                     <div className="containerDos">
                         <div className="about__left">
-                            <div className="container__photoVictoria"></div>
+                            <div className="container__photoVictoria" ></div>
                         </div>
 
                         <div className="about__right">

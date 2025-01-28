@@ -1,13 +1,10 @@
-/* Font Family */
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Oswald:wght@200..700&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-
 
 .container__hero {
     background-image: url('../../images/merc3.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    width: 100vw;
+    width: 100dvw;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -16,7 +13,7 @@
 }
 
 .header {
-    width: 100%;
+    width: 100dvw;
     height: 100%;
     display: flex;
     align-items: center;
@@ -141,15 +138,14 @@
     padding: 15px;
     transition: all .5s ease;
     text-align: start;
-
-    view-timeline-name: --title;
-    view-timeline-axis: block;
     
-    animation-timeline: --title;
-    animation-name: opacity;
-    animation-fill-mode: both;
-    animation-range: entry 25% cover 35%;
+    view-timeline-name: --reveal;
 
+    animation-name: fadeOnScroll;
+    animation-fill-mode: both;
+
+    animation-timeline: --reveal;
+    animation-range: entry 25% cover 50%;
 }
 
 .typePhoto__item h3 {

@@ -1,6 +1,6 @@
 import './Footer.css'
 
-import { FaFacebook, FaInstagram, FaTwitch, FaWhatsapp, FaYoutube, FaPinterest } from 'react-icons/fa';
+import { FaFacebook, FaInstagram, FaWhatsapp, FaLinkedin } from 'react-icons/fa';
 
 const Footer = () => {
   return (
@@ -8,20 +8,17 @@ const Footer = () => {
       <footer className='footer'>
 
         <div className="container__icon">
-          <a href="#"><FaFacebook className='icon' /></a>
-          <a href="#"><FaInstagram className='icon' /></a>
-          <a href="#"><FaTwitch className='icon' /></a>
-          <a href="#"><FaWhatsapp className='icon' /></a>
-          <a href="#"><FaYoutube className='icon' /></a>
-          <a href="#"><FaPinterest className='icon' /></a>
+          <a href="https://www.facebook.com/share/12F5h3e5LEy/?mibextid=wwXIfr" target='_blank'><FaFacebook className='icon' /></a>
+          <a href="https://www.instagram.com/mvictoria_aa?igsh=enVzNjhoMXhvZG12" target='_blank'><FaInstagram className='icon' /></a>
+          <a href="https://www.linkedin.com/in/maria-victoria-arroche-alvarez-3840bb179?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target='_blank'><FaLinkedin className='icon' /></a>
         </div>
 
         <div className="container__dir">
-          <a href="#" className="footer__a"> LinkedIn</a>
-          <a href="#" className="footer__a">PayPal</a>
-          <a href="#" className="footer__a">My Works</a>
+          <button className='buttonWp'>
+            <a href="https://w.app/victoriaarrochealvarez" target='_blank'>Call Me</a>
+            <FaWhatsapp className='whatpsapp' />
+          </button>
         </div>
-
         <div className="copyright">
           &copy; 2025 Maria Victoria Arroche. Todos los derechos reservados.
         </div>

@@ -1,15 +1,18 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+/* Font Family */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Oswald:wght@200..700&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
+
+:root {
+  
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-
+  
   --color1: #100303;
   --color2: #F7F7F7;
   --color3: #242424;
   --color4: #9300ce;
   --color5: #00c2ae;
-
+  
   a {
     text-decoration:none ;
   }
@@ -19,61 +22,16 @@ body {
   background-image: radial-gradient(circle, #410f46, #501656, #5f1e66, #6f2576, #7f2d87, #7f2d87, #7f2d87, #7f2d87, #6f2576, #5f1e66, #501656, #410f46);
 }
 
-@keyframes topScroll {
+@keyframes fadeOnScroll {
   from {
-      opacity: 0;
-      transform: translateY(50px);
+    opacity: 0;
+    scale: 10%;
   }
 
   to {
-      opacity: 1;
-      transform: translateY(0);
+    opacity: 1;
+    scale: 100%;
+
   }
+  
 }
-
-@keyframes opacity {
-  from {
-      opacity: 0;
-  }
-
-  to {
-      opacity: 1;
-  }
-}
-
-@keyframes moveTopOpacity {
-  from {
-      transform: translateY(0px);
-      opacity: .5;
-  }
-
-  to {
-      transform: translateY(-200px);
-      opacity: 1;
-
-  }
-}
-
-@keyframes moveLeft {
-  from {
-      transform: translateX(-200px);
-      opacity: 0;
-  }
-
-  to {
-      transform: translateY(0px);
-      opacity: 1;
-  }
-}
-@keyframes g {
-  from {
-      transform: translateX(200px);
-      opacity: 0;
-  }
-
-  to {
-      transform: translateY(0px);
-      opacity: 1;
-  }
-}
-

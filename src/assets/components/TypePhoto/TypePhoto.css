@@ -1,45 +1,51 @@
 .typePhoto {
     width: 100vw;
     height: auto;
-    padding: 20px 0;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 50px;
     position: relative;
-
-    view-timeline-name: --sectionMove;
-    view-timeline-axis: block;
-    
-    animation-timeline: --sectionMove;
-    animation-name: moveTopOpacity;
-    animation-fill-mode: both;
-    animation-range: entry 10% cover 30%;
-
-    padding-top: 100px;
+    padding: 50px;
+    align-items: center;
 
 }
 
+.tittle__typePhoto {
+    color: var(--color2);
+    font-size: 1.9rem;
+    text-shadow: 2px 3px 3px var(--color3);
+    padding: 5px;
+    text-align: center;
+}
+
 .category {
-    width: 100%;
-    height: 300px;
+    width: 95%;
+    height: 100px;
+    margin: auto;
     display: grid;
     place-content: center;
-    border: 2px solid;
     border-radius: 30px;
-    transition: height .5s ease-in-out;
+    transition: all .5s ease-in-out;
 
-    
-    view-timeline-name: --moveLeft;
-    view-timeline-axis: block;
-    
-    animation-timeline: --moveLeft;
-    animation-name: moveLeft;
+    view-timeline-name: --reveal;
+
+    animation-name: fadeOnScroll;
     animation-fill-mode: both;
-    animation-range: entry 25% cover 35%;
+
+    animation-timeline: --reveal;
+    animation-range: entry 25% cover 50%;
 }
 
 .category h2 {
     color: var(--color2);
+    text-shadow: 2px 3px 3px var(--color1);
+    height: 50px;
+    background-color: transparent;
+    border-radius: 5px;
+    width: 300px;
+    display: grid;
+    place-content: center;
+    transition: all .6s ease-in-out;
 }
 
 .category1, .category2, .category3 {
@@ -47,6 +53,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     opacity: .5;
+    overflow: hidden;
 }
 
 .category1 {
@@ -64,23 +71,57 @@
 .category:hover {
     opacity: 1;
     height: 350px;
-    transition: height .5s ease-in-out;
+    transition: all .5s ease-in-out;
 }
+
+.category:hover h2 {
+    background-color: #7f258b88;
+}
+
+#buttonGallery {
+    border: none;
+    background-color: var(--color4);
+    box-shadow: 2px 2px 5px var(--color4);
+    transition: all .3s ease-in;
+    cursor: pointer;
+
+}
+
+#buttonGallery a {
+    font-weight: 500;
+    color: var(--color2);
+}
+
+#buttonGallery:hover, #buttonGallery:focus  {
+    background-color: transparent;
+    transition: all .3s linear ease-in;
+
+}
+
 
 @media (min-width:768px) {
     .typePhoto {
-        flex-direction: row;
+        flex-direction: column;
         text-align: center;
         justify-content: space-around;
         max-width: 770px;
         margin: auto;
     }
- 
+
     .category {
-        max-width: 300px;
+        height: 350px;
     }
 
-    .category:hover {
-        height: 400px;
+    .category h2 {
+        font-size: 1.1rem;
+        color: var(--color2);
+        text-shadow: 2px 3px 3px var(--color1);
+    }
+
+    .container__category {
+        display: flex;
+        gap: 5px;
+        width: 100%;
+        height: 100%;
     }
 }

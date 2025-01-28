@@ -1,13 +1,12 @@
 .prueba {
     background-color: rgb(82, 1, 82);
+    view-timeline-name: --reveal;
 
-    view-timeline-name: --sectionMove;
-    view-timeline-axis: block;
-    
-    animation-timeline: --sectionMove;
-    animation-name: moveTopOpacity;
+    animation-name: fadeOnScroll;
     animation-fill-mode: both;
-    animation-range: entry 30% cover 50%;
+
+    animation-timeline: --reveal;
+    animation-range: entry 25% cover 50%;
 }
 
 .container__about {

@@ -1,54 +1,72 @@
 import './Header.css'
 import Menu from './Menu/Menu'
 
+
 // Framer-motion
-import { motion, AnimatePresence  } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
+
 
 
 // IMAGENES
-// import LogoVictoria from '../../images/logoVictArr.png'
 import Logo2 from '../../images/Cam.svg'
 
 // ICONOS 
 import { HiMenu } from "react-icons/hi";
 import { AiOutlineClose } from "react-icons/ai";
 
-import { useState} from 'react';
+
+import { useState, useRef, useEffect } from 'react';
 
 const Header = () => {
 
     const [isOpen, setIsOpen] = useState(false);
+    const menuRef = useRef(null);
 
     const toggleMenu = () => {
         setIsOpen(!isOpen);
     };
 
+    // CERRAR MENU RESPONSIVE AL CLICKEAR EN CUALQUIAR LUGAR DE LA PANTALLA
+    
+    useEffect(() => {
+        const handleClickOutside = (e) => {
+            if (menuRef.current && !menuRef.current.contains(e.target)) {
+                setIsOpen(false);
+            }
+        }
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, []);
+
+
     return (
         <>
             <div className="container__hero">
 
-                <header className="header container">
+                <header className="header container" id='home'>
 
                     {/* Contenedor LOGO MARCA */}
 
                     <motion.img src={Logo2} alt="Logo" id="logo"
-                        initial= {{rotateZ: '20deg', opacity:0, scale: 1}}
-                        animate= {{ opacity: 1, scale: 1.8,rotateZ: '0deg'}}
-                        transition= {{ duration: 1, ease: 'easeInOut' }}
+                        initial={{ rotateZ: '20deg', opacity: 0, scale: 1 }}
+                        animate={{ opacity: 1, scale: 1.8, rotateZ: '0deg' }}
+                        transition={{ duration: 1, ease: 'easeInOut' }}
                     />
 
                     {!isOpen && (
-                        <HiMenu className='iconMenu iconOpen' onClick={toggleMenu}/>
+                        <HiMenu className='iconMenu iconOpen' onClick={toggleMenu} />
                     )}
 
                     {isOpen && (
-                        <AiOutlineClose  className='iconMenu iconClose' onClick={toggleMenu}/>
+                        <AiOutlineClose className='iconMenu iconClose' onClick={toggleMenu} />
                     )}
 
 
                     {/* Componente menu responsive */}
 
-                    <div className='container__menuResponsive'>
+                    <div className='container__menuResponsive' ref={menuRef}>
                         <AnimatePresence>
                             {isOpen && (
                                 <Menu
@@ -63,10 +81,10 @@ const Header = () => {
 
                     <nav className='navDesktop'>
                         <div className='container__navDesktop'>
-                            <a href="#" className="navBar__a">Home</a>
-                            <a href="#" className="navBar__a">About Me</a>
-                            <a href="#" className="navBar__a">My photographs</a>
-                            <a href="#" className="navBar__a">Contact</a>
+                            <a href='#home' className="navBar__a">Home</a>
+                            <a href='#aboutme' className="navBar__a">About Me</a>
+                            <a href='#myphotographs' className="navBar__a">My photographs</a>
+                            <a href='#contact' className="navBar__a">Contact</a>
                         </div>
                     </nav>
 
@@ -98,14 +116,10 @@ const Header = () => {
                                 <h3>Captured with Nikon D850 and AF-S NIKKOR 70-200mm f/2.8E FL ED VR Lens</h3>
                             </div>
                         </div>
-                        
+
                     </div>
 
                 </div>
-
-            </div>
-
-            <div className='hola'>
 
             </div>
         </>

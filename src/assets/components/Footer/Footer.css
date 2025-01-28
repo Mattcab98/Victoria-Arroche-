@@ -51,20 +51,52 @@
     padding: 10px;
 }
 
+.buttonWp {
+    background-color: var(--color4);
+    border: none;
+    border-radius: 20px;
+    width: 150px;
+    margin: auto;
+    transition: all .3s ease-in-out;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.buttonWp a {
+    color: var(--color2);
+}
+
+.buttonWp:hover {
+    background-color: #590074;
+    transition: all .3s ease-in-out;
+    scale: 1.1;
+}
+
+.whatpsapp {
+    font-size: 1.5rem;
+    right: 10px;
+}
+
 @media (min-width:768px) {
     .footer {
         grid-template-columns: repeat(2,1fr);
         grid-template-rows: repeat(2, 1fr);
-        padding: 40px;
+        padding: 50px;
     }
 
     .container__dir {
         flex-direction: row;
         justify-content: space-evenly;
     }
+    
+    .footer a {
+        font-size: 1.1rem;
+    }
 
     .copyright {
-        
-    grid-column: 1/4;
+        font-size: 1rem;
+        grid-column: 1/4;
     }
 }
